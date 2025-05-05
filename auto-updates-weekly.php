@@ -6,6 +6,14 @@
  * Plugin URI: https://github.com/szepeviktor/wordpress-auto-updates
  */
 
+/*
+Remove currently scheduled events.
+
+wp cron event delete wp_version_check
+wp cron event delete wp_update_plugins
+wp cron event delete wp_update_themes
+*/
+
 add_action(
     'plugins_loaded',
     static function () {
