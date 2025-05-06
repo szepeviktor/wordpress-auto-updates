@@ -4,15 +4,13 @@
  * Plugin Name: Reschedule auto-updates to an off-peak hour of the week
  * Description: Benefit from not installing each version 
  * Plugin URI: https://github.com/szepeviktor/wordpress-auto-updates
+ *
+ * Remove currently scheduled events.
+ *
+ * wp cron event delete wp_version_check
+ * wp cron event delete wp_update_plugins
+ * wp cron event delete wp_update_themes
  */
-
-/*
-Remove currently scheduled events.
-
-wp cron event delete wp_version_check
-wp cron event delete wp_update_plugins
-wp cron event delete wp_update_themes
-*/
 
 add_action(
     'plugins_loaded',
