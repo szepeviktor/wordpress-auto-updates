@@ -7,8 +7,8 @@
 
 add_action(
     'automatic_updates_complete',
-    static function ($updateResults) {
-        error_log('Automatic update results: '.var_export($updateResults, true));
+    static function ($update_results) {
+        error_log('Automatic update results: '.var_export($update_results, true));
     },
     10,
     1
