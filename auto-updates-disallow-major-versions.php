@@ -2,7 +2,6 @@
 
 /*
  * Plugin Name: Disallow auto-updates to new major version
- * Description: Benefit from not installing each version
  * Plugin URI: https://github.com/szepeviktor/wordpress-auto-updates
  */
 
@@ -18,6 +17,7 @@ add_filter(
         if ($new_major_version !== $current_major_version) {
             return false;
         }
+
         return $update;
     },
     10,
