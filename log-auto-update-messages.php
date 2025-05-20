@@ -10,7 +10,7 @@ add_action(
     static function ($update_results) {
         error_log('Automatic update results: '.var_export($update_results, true));
     },
-    10,
+    PHP_INT_MAX,
     1
 );
 
