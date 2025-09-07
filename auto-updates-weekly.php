@@ -20,7 +20,7 @@ add_action(
         add_action(
             'init',
             static function () {
-                $next_run = (int)date('H') < 3 ? strtotime('today 03:10:30') : strtotime('next day 03:10:30');
+                $next_run = (int)gmdate('H') < 3 ? strtotime('today 03:10:30 UTC') : strtotime('next day 03:10:30 UTC');
                 $recurrence = 'weekly';
                 if (! wp_next_scheduled('wp_version_check') && ! wp_installing()) {
                     wp_schedule_event($next_run, $recurrence, 'wp_version_check');
